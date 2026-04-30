@@ -2,7 +2,7 @@
 
 namespace ConsoleApp26
 {
-    public class BankBranch
+    public class BankBranch: IBankBranch
     {
         private int branchNumber;
         private string address;
