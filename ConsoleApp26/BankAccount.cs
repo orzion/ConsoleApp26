@@ -16,6 +16,32 @@ namespace ConsoleApp26
             this.customerOwner = customerOwner;
         }
 
+        public int GetAccountNumber()
+        {
+            return this.accountNumber;
+        }
+        public double GetBalance()
+        {
+            return this.balance;
+        }
+        public Customer GetCustomerOwner()
+        {
+            return this.customerOwner;
+        }
+        
+        public void SetAccountNumber(int accountNumber)
+        {
+            this.accountNumber = accountNumber;
+        }
+        public void SetBalance(double balance)
+        {
+            this.balance = balance;
+        }
+        public void SetCustomerOwner(Customer customerOwner)
+        {
+            this.customerOwner = customerOwner;
+        }
+
         public void Deposit(double amount)
         {
             this.balance += amount;

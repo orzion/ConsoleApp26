@@ -13,6 +13,31 @@ namespace ConsoleApp26
             this.branchNumber = branchNumber;
             this.address = address;
         }
+
+        public int GetBranchNumber()
+        {
+            return this.branchNumber;
+        }
+        public string GetAddress()
+        {
+            return this.address;
+        }
+        public CheckingAccount[] GetAccounts()
+        {
+            return this.accounts;
+        }
+        public void SetBranchNumber(int branchNumber)
+        {
+            this.branchNumber = branchNumber;
+        }
+        public void SetAddress(string address)
+        {
+            this.address = address;
+        }
+        public void SetAccounts(CheckingAccount[] accounts)
+        {
+            this.accounts = accounts;
+        }
         public void AddAccount(CheckingAccount account)
         {
             for (int i = 0; i < accounts.Length; i++) {

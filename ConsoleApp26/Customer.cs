@@ -15,6 +15,31 @@ namespace ConsoleApp26
             this.phoneNumber = phoneNumber;
         }
 
+        public string GetId()
+        {
+            return this.id;
+        }
+        public void SetId(string id)
+        {
+            this.id = id;
+        }
+        public string GetName()
+        {
+            return this.name;
+        }
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+        public string GetPhoneNumber()
+        {
+            return this.phoneNumber;
+        }
+        public void SetPhoneNumber(string phoneNumber)
+        {
+            this.phoneNumber = phoneNumber;
+        }
+
         public void PrintDetails()
         {
             Console.WriteLine($"ID: {id}, Name: {name}, Phone: {phoneNumber}");

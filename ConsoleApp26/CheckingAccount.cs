@@ -9,6 +9,15 @@ namespace ConsoleApp26
         {
             this.overdraftLimit = overdraftLimit;
         }
+        public double GetOverdraftLimit()
+        {
+            return this.overdraftLimit;
+        }
+
+        public void SetOverdraftLimit(double overdraftLimit)
+        {
+            this.overdraftLimit = overdraftLimit;
+        }   
         public override void Withdraw(double amount)
         {
             if (balance -amount>= -overdraftLimit)
