@@ -3,17 +3,22 @@ namespace ConsoleApp26
 {
     public class CheckingAccount : BankAccount
     {
-        private double overdraftLimit;//-15,000 > -30,000
+        private double overdraftLimit;
+
+        public CheckingAccount (int accountNumber, double balance,Customer customerOwner, double overdraftLimit): base(accountNumber, balance, customerOwner)
+        {
+            this.overdraftLimit = overdraftLimit;
+        }
         public override void Withdraw(double amount)
         {
-            if (overdraftLimit > amount)
+            if (balance -amount>= -overdraftLimit)
             {
-                Console.WriteLine("Overdraft limit exceeded");
+                balance -= amount;
+                
             }
             else
             {
-
-                balance -= amount;
+                Console.WriteLine("Overdraft limit exceeded");
             }
         }
 

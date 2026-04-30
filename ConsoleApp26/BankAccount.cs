@@ -9,6 +9,13 @@ namespace ConsoleApp26
         protected double balance;
         protected Customer customerOwner;
 
+        public BankAccount(int accountNumber, double balance, Customer customerOwner)
+        {
+            this.accountNumber = accountNumber;
+            this.balance = balance;
+            this.customerOwner = customerOwner;
+        }
+
         public void Deposit(double amount)
         {
             this.balance += amount;
