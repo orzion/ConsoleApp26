@@ -16,18 +16,22 @@ namespace ConsoleApp26
         public void AddAccount(CheckingAccount account)
         {
             for (int i = 0; i < accounts.Length; i++) {
-                if (accounts[i] == account) { 
+                if (accounts[i] == account) {
+                    Console.WriteLine("Account already exists");
                   break;
                 }
                 if(accounts[i] == null) {
                    accounts[i] =  account;
+                    Console.WriteLine("Account added successfully");
                    break;
                 }
             }
         }
-        private void PrintAccounts() {
+        public void PrintAccounts() {
             for (int i = 0; i < accounts.Length; i++) {
-               accounts[i].PrintDetails();
+                if (accounts[i] != null) {
+                    accounts[i].PrintDetails();
+                }
             }
         }
     }
